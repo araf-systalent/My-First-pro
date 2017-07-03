@@ -1,0 +1,81 @@
+
+<link href="css/style.css" rel="stylesheet">
+<!-- Style to fbChat -->
+<!-- if you want to change the color of samll button icone you can change in #facebook-small-button  style 
+background-color: white; for background
+color: #3b5998; facebook icone color
+-->
+<style type="text/css">	
+	#facebook-small-button	{
+		border-radius: 50%;
+		height: 75px;
+		width: 75px;
+		right: 2%;
+		bottom: 5%;
+		position: fixed;
+		background-color: white;
+		z-index: 100;
+		text-align: center;
+		color: #3b5998;
+		display: none;
+	}
+
+	#fbiconvector	{
+		vertical-align: middle;
+		line-height: 75px;
+	}
+
+    #floating-popup    {
+        position: fixed;
+        right: 2%;
+        bottom: 4%;
+        width: 340px;
+        z-index: 100;
+    }
+
+    #closeButtonfb {   
+        color: white;
+        position: absolute;
+        right: 10px;
+        font-size: 35px;
+        font-weight: bold;
+        z-index: 110;
+    }
+
+    #closeButtonfb:hover {
+        color: red;
+    }
+
+    @media only screen and (max-width: 768px) {
+		#facebook-small-button	{
+			display: block;
+		}
+
+		#floating-popup	{
+			display: none;
+		}
+	}
+</style>
+
+
+<div id="fb-root"></div>
+<!-- Cript to fbChat -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=309104122877751";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- HTML to fbChat -->
+<div id="facebook-small-button">
+	<a href="#"><i class="fa fa-facebook-square fa-4x" aria-hidden="true" id="fbiconvector" onclick="fbSmallButton()"></i></a>
+</div>
+
+<div id="floating-popup">
+    <!-- <span class="closeButton" onclick="closePopup()">&times;</span> -->
+    <a href="#" id="closeButtonfb" onclick="closeFbPopup()">&times;</a>
+    <div class="fb-page" data-href="https://www.facebook.com/Quelleactivitepourmoi-1461588293902207/" data-tabs="messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Quelleactivitepourmoi-1461588293902207/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Quelleactivitepourmoi-1461588293902207/">Quelleactivitepourmoi</a></blockquote></div>
+</div>
+
